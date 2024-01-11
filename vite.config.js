@@ -13,7 +13,7 @@ export default defineConfig((configEnv) => ({
     react(),
     tsConfigPaths(),
     linterPlugin({
-      include: ['./src}/**/*.{ts,tsx}'],
+      include: ['./src}/**/*.{ts,tsx,js,jsx}'],
       linters: [new EsLinter({ configEnv })],
     }),
     dts({
@@ -22,13 +22,16 @@ export default defineConfig((configEnv) => ({
   ],
   build: {
     lib: {
-      entry: resolve('src', 'component/index.ts'),
+      entry: resolve('src', 'component/index.js'),
       name: 'ReactPanorama',
       formats: ['es', 'umd'],
       fileName: (format) => `react-pano.${format}.js`,
     },
     rollupOptions: {
       external: [...Object.keys(packageJson.peerDependencies)],
+      rollupOptions: {
+        external: ['prop-types'],
+      },
     },
   },
 }))

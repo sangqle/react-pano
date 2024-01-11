@@ -18,7 +18,7 @@
     "declarationMap": true,
     "baseUrl": ".",
     "paths": {
-      "react-pano": ["src/component/index.ts"]
+      "react-pano": ["src/component/index.js"]
     },
     "typeRoots": ["node_modules/@types", "src/component/index.d.ts"],
 

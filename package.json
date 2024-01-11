@@ -1,15 +1,14 @@
 {
   "name": "react-pano",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint --fix 'src/**/*.{jsx,ts,tsx}'",
     "preview": "vite preview",
-    "format": "prettier --write src//**/*.{ts,tsx,css} --config ./.prettierrc",
+    "format": "prettier --write src//**/*.{js,jsx,css} --config ./.prettierrc",
     "prepare": "husky install"
   },
   "husky": {
@@ -41,8 +40,9 @@
     "react-dom": "^17.0.2"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
